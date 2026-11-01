@@ -41,6 +41,11 @@
 | P11 | 无 `zip` 命令 | 盒子未安装 | 用 Python `zipfile` 打包 `dist/` |
 | P12 | 代码残留：`finished` 变量、未使用的 `ENEMIES` 导入 | 迭代遗留 | 清理（noUnusedLocals 提示） |
 
+## 部署记录（GitHub Pages，2026-11-01 19:30 AEDT）
+- D12：保持 Vite `base: './'`（相对路径），不写死 `/<repo>/`。理由：manifest 的 `start_url`/`scope`、`sw.js` 注册路径、图标和 SW 缓存清单全部用相对路径，换仓库名或自定义域名无需重新构建。已在 `/sanguo-shaonian-lu/` 子路径下跑 E2E 验证通过。
+- D13：用 Actions 的官方 Pages 流程（`upload-pages-artifact` + `deploy-pages`），工作流里先跑 `npm test` 再构建，测试失败不发布。
+- P13：当前环境的 GitHub 连接器没有「创建仓库」「提交文件」「启用 Pages」的工具，盒子上的 `gh` 也未登录，所以无法由代理直接推送。需要用户先在 GitHub 上建一个空的公开仓库（建议名 `sanguo-shaonian-lu`），再由具备推送能力的方式（登录 `gh` 或云端代理）推送本仓库，并在仓库 Settings → Pages 把 Source 设为 “GitHub Actions”。
+
 ## 待办（Backlog）
 1. 第 10 关平衡（减少必须刷关的次数，或加入扫荡/离线收益）。
 2. 战斗中途退出的处理（目前开战即计入）。

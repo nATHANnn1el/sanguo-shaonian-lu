@@ -2,6 +2,12 @@
 
 格式参考 Keep a Changelog；版本遵循语义化版本。
 
+## [未发布] - 2026-11-01
+
+### 新增
+- 部署：GitHub Actions 工作流 `.github/workflows/deploy.yml`（`npm ci` → `npm test` → `npm run build` → `upload-pages-artifact` → `deploy-pages`），推送到 `main` 时发布到 GitHub Pages。
+- 子路径验证：用 `/sanguo-shaonian-lu/` 子路径本地托管 `dist/`，E2E 14/14 通过（含 Service Worker 激活、manifest）。`base: './'` 与相对路径的 manifest/sw 无需改动即可在任意子路径工作。
+
 ## [0.1.0] - 2026-11-01（MVP）
 
 ### 新增
