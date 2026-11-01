@@ -1,0 +1,580 @@
+[
+  {
+    "id": "liu-bei",
+    "name": "刘备",
+    "title": "仁德之主",
+    "faction": "shu",
+    "role": "support",
+    "hp": 1250,
+    "atk": 95,
+    "def": 60,
+    "spd": 96,
+    "basic": {
+      "name": "双股剑法",
+      "desc": "挥动双剑攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "仁心织锦",
+      "desc": "治疗我方全体，回复相当于自身攻击100%的生命，并使全队怒气+1。",
+      "effects": [
+        {
+          "type": "heal",
+          "mult": 1.0,
+          "target": "ally-all"
+        },
+        {
+          "type": "rage",
+          "amount": 1,
+          "target": "ally-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f2cfa4",
+      "hair": "crown",
+      "beard": "long",
+      "armor": "#2f7d4f",
+      "accent": "#e8c15a",
+      "weapon": "sword"
+    },
+    "bio": "汉室宗亲，以仁义聚拢人心。本作中是团队的回复与怒气枢纽。",
+    "unlock": "start"
+  },
+  {
+    "id": "guan-yu",
+    "name": "关羽",
+    "title": "武圣",
+    "faction": "shu",
+    "role": "warrior",
+    "hp": 1150,
+    "atk": 128,
+    "def": 58,
+    "spd": 104,
+    "basic": {
+      "name": "青龙斩",
+      "desc": "挥动长刀劈向敌方前排，造成105%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.05,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "寒潭斩月",
+      "desc": "蓄力一刀斩向敌方前排，造成260%攻击的伤害，并使其防御-20%，持续2回合。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 2.6,
+          "target": "enemy-front"
+        },
+        {
+          "type": "buff",
+          "stat": "def",
+          "pct": -0.2,
+          "turns": 2,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d9845a",
+      "hair": "helmet",
+      "beard": "long",
+      "armor": "#2f7d4f",
+      "accent": "#c43d3d",
+      "weapon": "blade"
+    },
+    "bio": "义薄云天的猛将，单点爆发出众。",
+    "unlock": "start"
+  },
+  {
+    "id": "zhang-fei",
+    "name": "张飞",
+    "title": "万夫莫当",
+    "faction": "shu",
+    "role": "guardian",
+    "hp": 1550,
+    "atk": 88,
+    "def": 88,
+    "spd": 92,
+    "basic": {
+      "name": "丈八一击",
+      "desc": "以蛇矛攻击敌方前排，造成90%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 0.9,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "雷吼震野",
+      "desc": "为自身附加相当于最大生命25%的护盾，对敌方全体造成80%攻击的伤害，并获得嘲讽2回合。",
+      "effects": [
+        {
+          "type": "shield",
+          "mult": 0.25,
+          "target": "self"
+        },
+        {
+          "type": "taunt",
+          "turns": 2
+        },
+        {
+          "type": "damage",
+          "mult": 0.8,
+          "target": "enemy-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#c9855f",
+      "hair": "bandana",
+      "beard": "long",
+      "armor": "#2f7d4f",
+      "accent": "#3b3b3b",
+      "weapon": "spear"
+    },
+    "bio": "声如雷霆的猛将，坚守前排吸引火力。",
+    "unlock": "stage-02"
+  },
+  {
+    "id": "zhuge-liang",
+    "name": "诸葛亮",
+    "title": "卧龙",
+    "faction": "shu",
+    "role": "strategist",
+    "hp": 920,
+    "atk": 138,
+    "def": 40,
+    "spd": 100,
+    "basic": {
+      "name": "羽扇轻挥",
+      "desc": "以谋略攻击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "星河燃火",
+      "desc": "对敌方全体造成120%攻击的伤害，并使其灼烧2回合（每回合受到相当于自身攻击40%的伤害）。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.2,
+          "target": "enemy-all"
+        },
+        {
+          "type": "dot",
+          "mult": 0.4,
+          "turns": 2,
+          "target": "enemy-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f2d4b0",
+      "hair": "hat",
+      "beard": "short",
+      "armor": "#e9e4d2",
+      "accent": "#2f7d4f",
+      "weapon": "fan"
+    },
+    "bio": "运筹帷幄的军师，擅长群体持续伤害。",
+    "unlock": "stage-05"
+  },
+  {
+    "id": "zhao-yun",
+    "name": "赵云",
+    "title": "常山龙胆",
+    "faction": "shu",
+    "role": "warrior",
+    "hp": 1120,
+    "atk": 125,
+    "def": 60,
+    "spd": 112,
+    "basic": {
+      "name": "龙胆突刺",
+      "desc": "挺枪攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "银龙七探",
+      "desc": "对当前生命最低的敌人发动三次突刺，每次造成90%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 0.9,
+          "target": "enemy-lowest-hp",
+          "hits": 3
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f0cba2",
+      "hair": "helmet",
+      "beard": "none",
+      "armor": "#e9e4d2",
+      "accent": "#2f7d4f",
+      "weapon": "spear"
+    },
+    "bio": "来去如风的猛将，擅长收割残血。",
+    "unlock": "stage-03"
+  },
+  {
+    "id": "ma-chao",
+    "name": "马超",
+    "title": "锦绣骑将",
+    "faction": "shu",
+    "role": "warrior",
+    "hp": 1080,
+    "atk": 130,
+    "def": 52,
+    "spd": 114,
+    "basic": {
+      "name": "铁骑冲锋",
+      "desc": "策马冲击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "西风烈骑",
+      "desc": "突袭敌方后排，造成240%攻击的伤害，并使自身怒气+2。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 2.4,
+          "target": "enemy-back"
+        },
+        {
+          "type": "rage",
+          "amount": 2,
+          "target": "self"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f0cba2",
+      "hair": "crown",
+      "beard": "none",
+      "armor": "#2f7d4f",
+      "accent": "#d6d6d6",
+      "weapon": "spear"
+    },
+    "bio": "西凉骑将，速度极快，专攻后排。",
+    "unlock": "stage-07"
+  },
+  {
+    "id": "cao-cao",
+    "name": "曹操",
+    "title": "乱世奸雄",
+    "faction": "wei",
+    "role": "strategist",
+    "hp": 1050,
+    "atk": 120,
+    "def": 55,
+    "spd": 102,
+    "basic": {
+      "name": "孟德剑指",
+      "desc": "挥剑指向敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "横槊赋诗",
+      "desc": "令我方全体攻击+20%，持续3回合，并对敌方前排造成180%攻击的伤害。",
+      "effects": [
+        {
+          "type": "buff",
+          "stat": "atk",
+          "pct": 0.2,
+          "turns": 3,
+          "target": "ally-all"
+        },
+        {
+          "type": "damage",
+          "mult": 1.8,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f1cba0",
+      "hair": "crown",
+      "beard": "short",
+      "armor": "#2b4f8f",
+      "accent": "#e8c15a",
+      "weapon": "sword"
+    },
+    "bio": "魏军统帅，擅长为全队增益。",
+    "unlock": "start"
+  },
+  {
+    "id": "xiahou-dun",
+    "name": "夏侯惇",
+    "title": "独目悍将",
+    "faction": "wei",
+    "role": "warrior",
+    "hp": 1180,
+    "atk": 122,
+    "def": 60,
+    "spd": 98,
+    "basic": {
+      "name": "刀锋横扫",
+      "desc": "挥刀攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "拔矢啖睛",
+      "desc": "对敌方前排造成220%攻击的伤害，并将造成伤害的25%转化为自身生命。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 2.2,
+          "target": "enemy-front",
+          "lifesteal": 0.25
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d9996e",
+      "hair": "helmet",
+      "beard": "short",
+      "armor": "#2b4f8f",
+      "accent": "#9a3b3b",
+      "weapon": "blade"
+    },
+    "bio": "悍勇的前排战士，自带吸血。",
+    "unlock": "start"
+  },
+  {
+    "id": "zhang-liao",
+    "name": "张辽",
+    "title": "威震逍遥",
+    "faction": "wei",
+    "role": "warrior",
+    "hp": 1100,
+    "atk": 125,
+    "def": 55,
+    "spd": 110,
+    "basic": {
+      "name": "奇兵突袭",
+      "desc": "突击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "逍遥奇袭",
+      "desc": "对敌方后排的两名敌人各造成170%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.7,
+          "target": "enemy-back-2"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#eac7a0",
+      "hair": "helmet",
+      "beard": "none",
+      "armor": "#2b4f8f",
+      "accent": "#c0c0c0",
+      "weapon": "halberd"
+    },
+    "bio": "擅长奇袭后排的突击手。",
+    "unlock": "stage-04"
+  },
+  {
+    "id": "guo-jia",
+    "name": "郭嘉",
+    "title": "鬼才军师",
+    "faction": "wei",
+    "role": "support",
+    "hp": 900,
+    "atk": 105,
+    "def": 38,
+    "spd": 106,
+    "basic": {
+      "name": "奇谋暗算",
+      "desc": "暗中攻击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "十胜妙算",
+      "desc": "使我方全体怒气+1，并对敌方攻击最高的单位造成140%攻击的伤害。",
+      "effects": [
+        {
+          "type": "rage",
+          "amount": 1,
+          "target": "ally-all"
+        },
+        {
+          "type": "damage",
+          "mult": 1.4,
+          "target": "enemy-top-atk"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#f4d8b6",
+      "hair": "hood",
+      "beard": "none",
+      "armor": "#2b4f8f",
+      "accent": "#b9a0e0",
+      "weapon": "fan"
+    },
+    "bio": "擅长加速全队节奏的军师。",
+    "unlock": "stage-01"
+  },
+  {
+    "id": "sima-yi",
+    "name": "司马懿",
+    "title": "冢虎",
+    "faction": "wei",
+    "role": "strategist",
+    "hp": 960,
+    "atk": 132,
+    "def": 45,
+    "spd": 98,
+    "basic": {
+      "name": "隐忍一击",
+      "desc": "伺机攻击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "鹰视狼顾",
+      "desc": "对攻击最高的敌人造成200%攻击的伤害，并使其封绝1回合（无法释放绝技）。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 2.0,
+          "target": "enemy-top-atk"
+        },
+        {
+          "type": "silence",
+          "turns": 1,
+          "target": "enemy-top-atk"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#eccaa2",
+      "hair": "hat",
+      "beard": "short",
+      "armor": "#2b4f8f",
+      "accent": "#555a6e",
+      "weapon": "staff"
+    },
+    "bio": "擅长压制对手核心的谋士。",
+    "unlock": "stage-06"
+  },
+  {
+    "id": "xu-chu",
+    "name": "许褚",
+    "title": "虎痴",
+    "faction": "wei",
+    "role": "guardian",
+    "hp": 1500,
+    "atk": 90,
+    "def": 90,
+    "spd": 90,
+    "basic": {
+      "name": "裂石重击",
+      "desc": "抡起重兵器攻击敌方前排，造成90%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 0.9,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "虎痴裂地",
+      "desc": "自身防御+30%、嘲讽，持续2回合，并对敌方全体造成70%攻击的伤害。",
+      "effects": [
+        {
+          "type": "buff",
+          "stat": "def",
+          "pct": 0.3,
+          "turns": 2,
+          "target": "self"
+        },
+        {
+          "type": "taunt",
+          "turns": 2
+        },
+        {
+          "type": "damage",
+          "mult": 0.7,
+          "target": "enemy-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d1906a",
+      "hair": "bandana",
+      "beard": "none",
+      "armor": "#2b4f8f",
+      "accent": "#3b3b3b",
+      "weapon": "axe"
+    },
+    "bio": "魏军坚盾，嘲讽吸引火力。",
+    "unlock": "start"
+  }
+]

@@ -1,0 +1,311 @@
+[
+  {
+    "id": "hj-soldier",
+    "name": "黄巾兵",
+    "title": "乡野起义军",
+    "role": "warrior",
+    "hp": 900,
+    "atk": 95,
+    "def": 40,
+    "spd": 90,
+    "basic": {
+      "name": "挥砍",
+      "desc": "攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "蜂拥而上",
+      "desc": "对敌方前排造成150%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.5,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d9b080",
+      "hair": "bandana",
+      "beard": "none",
+      "armor": "#b8932f",
+      "accent": "#d6c24a",
+      "weapon": "blade"
+    }
+  },
+  {
+    "id": "hj-archer",
+    "name": "黄巾弓手",
+    "title": "乡野弓手",
+    "role": "strategist",
+    "hp": 720,
+    "atk": 108,
+    "def": 30,
+    "spd": 95,
+    "basic": {
+      "name": "流矢",
+      "desc": "射击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "乱箭齐发",
+      "desc": "对敌方后排两名敌人各造成130%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.3,
+          "target": "enemy-back-2"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d9b080",
+      "hair": "bandana",
+      "beard": "none",
+      "armor": "#b8932f",
+      "accent": "#d6c24a",
+      "weapon": "bow"
+    }
+  },
+  {
+    "id": "hj-brute",
+    "name": "黄巾力士",
+    "title": "蛮力壮汉",
+    "role": "guardian",
+    "hp": 1350,
+    "atk": 82,
+    "def": 72,
+    "spd": 80,
+    "basic": {
+      "name": "蛮撞",
+      "desc": "撞击敌方前排，造成90%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 0.9,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "蛮牛冲阵",
+      "desc": "获得相当于最大生命20%的护盾，并对敌方全体造成70%攻击的伤害。",
+      "effects": [
+        {
+          "type": "shield",
+          "mult": 0.2,
+          "target": "self"
+        },
+        {
+          "type": "damage",
+          "mult": 0.7,
+          "target": "enemy-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#caa070",
+      "hair": "bandana",
+      "beard": "short",
+      "armor": "#8a6f2a",
+      "accent": "#d6c24a",
+      "weapon": "axe"
+    }
+  },
+  {
+    "id": "hj-mage",
+    "name": "黄巾术士",
+    "title": "符水道人",
+    "role": "support",
+    "hp": 800,
+    "atk": 92,
+    "def": 35,
+    "spd": 100,
+    "basic": {
+      "name": "符咒",
+      "desc": "以符咒攻击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "符水疗伤",
+      "desc": "治疗我方全体，回复相当于自身攻击90%的生命。",
+      "effects": [
+        {
+          "type": "heal",
+          "mult": 0.9,
+          "target": "ally-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#e0c090",
+      "hair": "hood",
+      "beard": "long",
+      "armor": "#7c5a1e",
+      "accent": "#d6c24a",
+      "weapon": "staff"
+    }
+  },
+  {
+    "id": "zhang-liang",
+    "name": "张梁",
+    "title": "人公将军",
+    "role": "guardian",
+    "hp": 2300,
+    "atk": 108,
+    "def": 72,
+    "spd": 96,
+    "basic": {
+      "name": "开山重击",
+      "desc": "攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "人公震地",
+      "desc": "为自身附加相当于最大生命15%的护盾，对敌方全体造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "shield",
+          "mult": 0.15,
+          "target": "self"
+        },
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#d1996a",
+      "hair": "helmet",
+      "beard": "long",
+      "armor": "#8a6f2a",
+      "accent": "#c43d3d",
+      "weapon": "axe"
+    },
+    "boss": true
+  },
+  {
+    "id": "zhang-bao",
+    "name": "张宝",
+    "title": "地公将军",
+    "role": "strategist",
+    "hp": 1900,
+    "atk": 125,
+    "def": 55,
+    "spd": 100,
+    "basic": {
+      "name": "妖风",
+      "desc": "以妖术攻击敌方后排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-back"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "地公妖阵",
+      "desc": "对敌方全体造成90%攻击的伤害，使其灼烧2回合，并封绝攻击最高者1回合。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 0.9,
+          "target": "enemy-all"
+        },
+        {
+          "type": "dot",
+          "mult": 0.3,
+          "turns": 2,
+          "target": "enemy-all"
+        },
+        {
+          "type": "silence",
+          "turns": 1,
+          "target": "enemy-top-atk"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#e0c28f",
+      "hair": "hat",
+      "beard": "long",
+      "armor": "#6b4a1e",
+      "accent": "#7a48b8",
+      "weapon": "staff"
+    },
+    "boss": true
+  },
+  {
+    "id": "zhang-jue",
+    "name": "张角",
+    "title": "天公将军",
+    "role": "strategist",
+    "hp": 3000,
+    "atk": 128,
+    "def": 65,
+    "spd": 102,
+    "basic": {
+      "name": "太平符箓",
+      "desc": "施放符箓攻击敌方前排，造成100%攻击的伤害。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.0,
+          "target": "enemy-front"
+        }
+      ]
+    },
+    "ultimate": {
+      "name": "天公雷罚",
+      "desc": "对敌方全体造成120%攻击的伤害，并回复我方全体相当于自身攻击50%的生命。",
+      "effects": [
+        {
+          "type": "damage",
+          "mult": 1.2,
+          "target": "enemy-all"
+        },
+        {
+          "type": "heal",
+          "mult": 0.5,
+          "target": "ally-all"
+        }
+      ]
+    },
+    "look": {
+      "skin": "#e8cfa0",
+      "hair": "hood",
+      "beard": "long",
+      "armor": "#5a3d14",
+      "accent": "#e8c15a",
+      "weapon": "staff"
+    },
+    "boss": true
+  }
+]

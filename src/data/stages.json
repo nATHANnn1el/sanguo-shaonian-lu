@@ -1,0 +1,409 @@
+[
+  {
+    "id": "stage-01",
+    "chapter": 1,
+    "index": 1,
+    "name": "黄巾初起",
+    "intro": "乡间的黄巾起义军拦住了去路，先试试身手。",
+    "recommended": 770,
+    "enemies": [
+      {
+        "unit": "hj-soldier",
+        "slot": 0,
+        "level": 1
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 1,
+        "level": 1
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 1
+      }
+    ],
+    "rewards": {
+      "gold": 120,
+      "stones": 0,
+      "firstClearGold": 96,
+      "unlockGeneral": "guo-jia"
+    }
+  },
+  {
+    "id": "stage-02",
+    "chapter": 1,
+    "index": 2,
+    "name": "涿郡校场",
+    "intro": "义军在校场操练，击退他们，说不定能招揽到新人。",
+    "recommended": 970,
+    "enemies": [
+      {
+        "unit": "hj-soldier",
+        "slot": 0,
+        "level": 3
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 1,
+        "level": 3
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 3
+      }
+    ],
+    "rewards": {
+      "gold": 150,
+      "stones": 0,
+      "firstClearGold": 120,
+      "unlockGeneral": "zhang-fei"
+    }
+  },
+  {
+    "id": "stage-03",
+    "chapter": 1,
+    "index": 3,
+    "name": "广宗外围",
+    "intro": "广宗城外布满黄巾哨所，注意后排弓手。",
+    "recommended": 1440,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 5
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 1,
+        "level": 5
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 5
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 4,
+        "level": 5
+      }
+    ],
+    "rewards": {
+      "gold": 180,
+      "stones": 1,
+      "firstClearGold": 144,
+      "unlockGeneral": "zhao-yun"
+    }
+  },
+  {
+    "id": "stage-04",
+    "chapter": 1,
+    "index": 4,
+    "name": "夜袭粮道",
+    "intro": "趁夜截断敌军粮道，对方有术士疗伤。",
+    "recommended": 1900,
+    "enemies": [
+      {
+        "unit": "hj-soldier",
+        "slot": 0,
+        "level": 6
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 1,
+        "level": 6
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 2,
+        "level": 6
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 6
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 4,
+        "level": 6
+      }
+    ],
+    "rewards": {
+      "gold": 210,
+      "stones": 1,
+      "firstClearGold": 168,
+      "unlockGeneral": "zhang-liao"
+    }
+  },
+  {
+    "id": "stage-05",
+    "chapter": 1,
+    "index": 5,
+    "name": "人公张梁",
+    "intro": "人公将军张梁亲自镇守营寨，是第一道难关。",
+    "recommended": 2410,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 8
+      },
+      {
+        "unit": "zhang-liang",
+        "slot": 1,
+        "level": 8
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 2,
+        "level": 8
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 8
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 4,
+        "level": 8
+      }
+    ],
+    "rewards": {
+      "gold": 260,
+      "stones": 2,
+      "firstClearGold": 208,
+      "unlockGeneral": "zhuge-liang"
+    }
+  },
+  {
+    "id": "stage-06",
+    "chapter": 1,
+    "index": 6,
+    "name": "颍川烽火",
+    "intro": "烽火连天，黄巾主力在颍川集结。",
+    "recommended": 2910,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 10
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 1,
+        "level": 10
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 2,
+        "level": 10
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 3,
+        "level": 10
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 4,
+        "level": 10
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 5,
+        "level": 10
+      }
+    ],
+    "rewards": {
+      "gold": 290,
+      "stones": 2,
+      "firstClearGold": 232,
+      "unlockGeneral": "sima-yi"
+    }
+  },
+  {
+    "id": "stage-07",
+    "chapter": 1,
+    "index": 7,
+    "name": "曲阳雨夜",
+    "intro": "雨夜中敌军阵型严密，术士与弓手互相掩护。",
+    "recommended": 3050,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 11
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 1,
+        "level": 11
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 2,
+        "level": 11
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 3,
+        "level": 11
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 4,
+        "level": 11
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 5,
+        "level": 11
+      }
+    ],
+    "rewards": {
+      "gold": 330,
+      "stones": 3,
+      "firstClearGold": 264,
+      "unlockGeneral": "ma-chao"
+    }
+  },
+  {
+    "id": "stage-08",
+    "chapter": 1,
+    "index": 8,
+    "name": "地公张宝",
+    "intro": "地公将军张宝以妖阵灼烧并封锁我军绝技。",
+    "recommended": 3510,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 13
+      },
+      {
+        "unit": "zhang-bao",
+        "slot": 1,
+        "level": 13
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 2,
+        "level": 13
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 3,
+        "level": 13
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 4,
+        "level": 13
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 5,
+        "level": 13
+      }
+    ],
+    "rewards": {
+      "gold": 380,
+      "stones": 3,
+      "firstClearGold": 304
+    }
+  },
+  {
+    "id": "stage-09",
+    "chapter": 1,
+    "index": 9,
+    "name": "决战前夜",
+    "intro": "最后的精锐守卫在天公的营帐之外。",
+    "recommended": 3610,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 12
+      },
+      {
+        "unit": "hj-soldier",
+        "slot": 1,
+        "level": 12
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 2,
+        "level": 12
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 3,
+        "level": 12
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 4,
+        "level": 12
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 5,
+        "level": 12
+      }
+    ],
+    "rewards": {
+      "gold": 430,
+      "stones": 4,
+      "firstClearGold": 344
+    }
+  },
+  {
+    "id": "stage-10",
+    "chapter": 1,
+    "index": 10,
+    "name": "天公将军",
+    "intro": "天公将军张角现身，击败他，平定黄巾之乱。",
+    "recommended": 4440,
+    "enemies": [
+      {
+        "unit": "hj-brute",
+        "slot": 0,
+        "level": 14
+      },
+      {
+        "unit": "zhang-jue",
+        "slot": 1,
+        "level": 15
+      },
+      {
+        "unit": "hj-brute",
+        "slot": 2,
+        "level": 14
+      },
+      {
+        "unit": "hj-mage",
+        "slot": 3,
+        "level": 14
+      },
+      {
+        "unit": "hj-archer",
+        "slot": 4,
+        "level": 14
+      },
+      {
+        "unit": "zhang-liang",
+        "slot": 5,
+        "level": 14
+      }
+    ],
+    "rewards": {
+      "gold": 520,
+      "stones": 5,
+      "firstClearGold": 416
+    }
+  }
+]

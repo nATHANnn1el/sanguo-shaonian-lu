@@ -1,0 +1,23 @@
+{
+  "name": "sanguo-shaonian-lu",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "三国少年录 - 原创三国回合制卡牌手游 MVP（移动端 PWA）",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "tsc --noEmit && vite build",
+    "preview": "vite preview --host --port 4173",
+    "test": "vitest run",
+    "test:report": "vitest run --reporter=json --outputFile=docs/test-results.json",
+    "icons": "node scripts/make-icons.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "ajv": "^8.20.0",
+    "ajv-formats": "^3.0.1",
+    "typescript": "^7.0.2",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

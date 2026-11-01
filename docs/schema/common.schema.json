@@ -1,0 +1,70 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "common.schema.json",
+  "title": "公共定义：技能与效果",
+  "definitions": {
+    "targetSel": {
+      "type": "string",
+      "enum": ["enemy-front", "enemy-back", "enemy-back-2", "enemy-all", "enemy-lowest-hp", "enemy-top-atk", "self", "ally-all", "ally-lowest-hp"]
+    },
+    "effect": {
+      "oneOf": [
+        { "type": "object", "required": ["type", "mult", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "damage" }, "mult": { "type": "number", "exclusiveMinimum": 0 }, "target": { "$ref": "#/definitions/targetSel" }, "hits": { "type": "integer", "minimum": 1, "maximum": 6 }, "lifesteal": { "type": "number", "minimum": 0, "maximum": 1 } } },
+        { "type": "object", "required": ["type", "mult", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "heal" }, "mult": { "type": "number", "exclusiveMinimum": 0 }, "target": { "$ref": "#/definitions/targetSel" } } },
+        { "type": "object", "required": ["type", "mult", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "shield" }, "mult": { "type": "number", "exclusiveMinimum": 0 }, "target": { "$ref": "#/definitions/targetSel" } } },
+        { "type": "object", "required": ["type", "stat", "pct", "turns", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "buff" }, "stat": { "enum": ["atk", "def", "spd"] }, "pct": { "type": "number", "minimum": -0.9, "maximum": 2 }, "turns": { "type": "integer", "minimum": 1, "maximum": 5 }, "target": { "$ref": "#/definitions/targetSel" } } },
+        { "type": "object", "required": ["type", "mult", "turns", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "dot" }, "mult": { "type": "number", "exclusiveMinimum": 0 }, "turns": { "type": "integer", "minimum": 1, "maximum": 5 }, "target": { "$ref": "#/definitions/targetSel" } } },
+        { "type": "object", "required": ["type", "amount", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "rage" }, "amount": { "type": "integer", "minimum": -8, "maximum": 8 }, "target": { "$ref": "#/definitions/targetSel" } } },
+        { "type": "object", "required": ["type", "turns"], "additionalProperties": false,
+          "properties": { "type": { "const": "taunt" }, "turns": { "type": "integer", "minimum": 1, "maximum": 5 } } },
+        { "type": "object", "required": ["type", "turns", "target"], "additionalProperties": false,
+          "properties": { "type": { "const": "silence" }, "turns": { "type": "integer", "minimum": 1, "maximum": 3 }, "target": { "$ref": "#/definitions/targetSel" } } }
+      ]
+    },
+    "skill": {
+      "type": "object",
+      "required": ["name", "desc", "effects"],
+      "additionalProperties": false,
+      "properties": {
+        "name": { "type": "string", "minLength": 2, "maxLength": 8 },
+        "desc": { "type": "string", "minLength": 4 },
+        "effects": { "type": "array", "minItems": 1, "items": { "$ref": "#/definitions/effect" } }
+      }
+    },
+    "look": {
+      "type": "object",
+      "required": ["skin", "hair", "beard", "armor", "accent", "weapon"],
+      "additionalProperties": false,
+      "properties": {
+        "skin": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "hair": { "enum": ["topknot", "long", "helmet", "hat", "crown", "bandana", "hood"] },
+        "beard": { "enum": ["none", "short", "long"] },
+        "armor": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "accent": { "type": "string", "pattern": "^#[0-9a-fA-F]{6}$" },
+        "weapon": { "enum": ["blade", "spear", "fan", "sword", "halberd", "bow", "staff", "axe"] }
+      }
+    },
+    "unitBase": {
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z]+(-[a-z]+)*$" },
+        "name": { "type": "string", "minLength": 2, "maxLength": 6 },
+        "title": { "type": "string" },
+        "role": { "enum": ["warrior", "strategist", "guardian", "support"] },
+        "hp": { "type": "integer", "minimum": 100 },
+        "atk": { "type": "integer", "minimum": 10 },
+        "def": { "type": "integer", "minimum": 0 },
+        "spd": { "type": "integer", "minimum": 50, "maximum": 200 },
+        "basic": { "$ref": "#/definitions/skill" },
+        "ultimate": { "$ref": "#/definitions/skill" },
+        "look": { "$ref": "#/definitions/look" }
+      }
+    }
+  }
+}

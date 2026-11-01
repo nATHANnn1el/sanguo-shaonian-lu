@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "save.schema.json",
+  "title": "localStorage 存档（键名 sgsnl.save，当前 version = 1）",
+  "type": "object",
+  "required": ["version", "createdAt", "updatedAt", "resources", "roster", "formation", "progress", "settings", "stats"],
+  "additionalProperties": false,
+  "properties": {
+    "version": { "const": 1 },
+    "createdAt": { "type": "integer", "minimum": 0 },
+    "updatedAt": { "type": "integer", "minimum": 0 },
+    "resources": {
+      "type": "object", "required": ["gold", "stones"], "additionalProperties": false,
+      "properties": { "gold": { "type": "integer", "minimum": 0 }, "stones": { "type": "integer", "minimum": 0 } }
+    },
+    "roster": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object", "required": ["owned", "level", "adv"], "additionalProperties": false,
+        "properties": { "owned": { "type": "boolean" }, "level": { "type": "integer", "minimum": 1, "maximum": 25 }, "adv": { "type": "integer", "minimum": 0, "maximum": 3 } }
+      }
+    },
+    "formation": {
+      "type": "array", "minItems": 6, "maxItems": 6,
+      "items": { "type": ["string", "null"] }
+    },
+    "progress": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object", "required": ["stars", "clears"], "additionalProperties": false,
+        "properties": { "stars": { "type": "integer", "minimum": 0, "maximum": 3 }, "clears": { "type": "integer", "minimum": 1 } }
+      }
+    },
+    "settings": {
+      "type": "object", "required": ["speed"], "additionalProperties": false,
+      "properties": { "speed": { "enum": [1, 2, 4] } }
+    },
+    "stats": {
+      "type": "object", "required": ["battles", "wins"], "additionalProperties": false,
+      "properties": { "battles": { "type": "integer", "minimum": 0 }, "wins": { "type": "integer", "minimum": 0 } }
+    }
+  }
+}

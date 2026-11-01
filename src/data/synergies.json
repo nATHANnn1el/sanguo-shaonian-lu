@@ -1,0 +1,77 @@
+[
+  {
+    "id": "peach-oath",
+    "name": "桃园同心",
+    "desc": "刘备、关羽、张飞同时上阵：全体生命与攻击提升10%。",
+    "members": [
+      "liu-bei",
+      "guan-yu",
+      "zhang-fei"
+    ],
+    "bonus": {
+      "hp": 0.1,
+      "atk": 0.1
+    }
+  },
+  {
+    "id": "dragon-rise",
+    "name": "卧龙腾云",
+    "desc": "诸葛亮、赵云同时上阵：全体攻击提升12%。",
+    "members": [
+      "zhuge-liang",
+      "zhao-yun"
+    ],
+    "bonus": {
+      "atk": 0.12
+    }
+  },
+  {
+    "id": "plan-world",
+    "name": "谋定天下",
+    "desc": "曹操、郭嘉同时上阵：全体速度提升6%；怒气满时曹操改放合击「雷霆定策」（需郭嘉在场）：对敌方全体造成170%攻击的伤害，使其全体怒气-2，并使我方全体怒气+1。",
+    "members": [
+      "cao-cao",
+      "guo-jia"
+    ],
+    "bonus": {
+      "spd": 0.06
+    },
+    "combo": {
+      "lead": "cao-cao",
+      "skill": {
+        "name": "雷霆定策",
+        "desc": "曹操与郭嘉联手施计：对敌方全体造成170%攻击的伤害，使其全体怒气-2，并使我方全体怒气+1。",
+        "effects": [
+          {
+            "type": "damage",
+            "mult": 1.7,
+            "target": "enemy-all"
+          },
+          {
+            "type": "rage",
+            "amount": -2,
+            "target": "enemy-all"
+          },
+          {
+            "type": "rage",
+            "amount": 1,
+            "target": "ally-all"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "tiger-wall",
+    "name": "虎卫长城",
+    "desc": "夏侯惇、许褚同时上阵：全体防御提升15%，生命提升6%。",
+    "members": [
+      "xiahou-dun",
+      "xu-chu"
+    ],
+    "bonus": {
+      "def": 0.15,
+      "hp": 0.06
+    }
+  }
+]
